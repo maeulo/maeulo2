@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>실시간 채팅 CSS 편집기</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/index.css">
+</head>
+<body>
+    <div class="app-container">
+        <aside class="controls-panel">
+            <header class="controls-header">
+                <h2>채팅 UI 편집기</h2>
+                <p>슬라이더와 색상 선택기를 사용하여 채팅 컴포넌트의 스타일을 실시간으로 수정하세요.</p>
+            </header>
+            <div id="controls-container" class="controls-list">
+                <!-- Controls will be dynamically inserted here by JavaScript -->
+            </div>
+        </aside>
+        <main class="content-panel">
+            <section class="preview-section" aria-labelledby="preview-heading">
+                <h2 id="preview-heading" class="panel-title">미리보기</h2>
+                <div class="preview-wrapper">
+                    <iframe id="preview-frame" title="채팅 컴포넌트 실시간 미리보기"></iframe>
+                </div>
+            </section>
+            <section class="code-section" aria-labelledby="code-heading">
+                <h2 id="code-heading" class="panel-title">생성된 코드</h2>
+                <div class="code-block-container">
+                    <div class="code-box">
+                        <div class="code-box-header">
+                            <h3>HTML (고정)</h3>
+                            <button id="copy-html-button" class="copy-button" aria-label="HTML 코드 복사">복사</button>
+                        </div>
+                        <pre><code id="html-code-display" class="language-html"></code></pre>
+                    </div>
+                    <div class="code-box">
+                        <div class="code-box-header">
+                            <h3>CSS (생성됨)</h3>
+                            <button id="copy-css-button" class="copy-button" aria-label="CSS 코드 복사">복사</button>
+                        </div>
+                        <pre><code id="css-code-display" class="language-css"></code></pre>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+    <script src="index.js" type="module"></script>
+<script type="module" src="/index.tsx"></script>
+</body>
+</html>
